@@ -1,0 +1,5 @@
+以python3为基础，提前安装依赖
+pip install requests
+pip install lxml
+
+然后将主页地址写道url.txt后启动csdn++即可
