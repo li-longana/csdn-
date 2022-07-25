@@ -6,14 +6,14 @@ print("CSDN++ 0.2 Bata版本启动中。。。。",end="\r")
 time.sleep(1)
 print("CSDN++ 0.2 Bata版本启动中。。。。。。")
 time.sleep(1)
-config=main.Openconfig('0.2 Bata\\config.txt').config
+config=main.Openconfig('config.txt').config
 # 加载配置文件
 print("配置文件加载成功。。。。。")
 time.sleep(1)
 print("预设推广次数为：",config['count'],"\n预设推广时间间隔为：",config['interval'],"\n预设推广地址为：",config['url'])
 time.sleep(1)
 
-ua=main.Openua('0.2 Bata\\ua.txt').ua
+ua=main.Openua('ua.txt').ua
 # 加载ua
 url=main.indexurl(config['url']).url
 # 加载文章
