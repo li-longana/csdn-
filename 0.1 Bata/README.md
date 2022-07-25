@@ -9,5 +9,5 @@ csdn++推广
 pip install requests
 pip install lxml
 
-#0.2 Bate 采用了全新的配置方法,在config.txt文件内配置博主主页url，访问次数和时间限制。
-count对应次数，intrval对应间隔时间（s），url对应博主主页
+然后将主页地址写道url.txt后启动csdn++即可
+启动后设定推广次数和时间，之后您挂在后台即可。

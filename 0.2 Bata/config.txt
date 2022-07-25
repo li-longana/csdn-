@@ -1,0 +1,3 @@
+{"count":"10000","interval":"60","url":"https://blog.csdn.net/qq_45514735?type=blog"}
+end
+#0.2 Bate 采用了全新的配置方法，count对应次数，intrval对应间隔时间（s），url对应博主主页

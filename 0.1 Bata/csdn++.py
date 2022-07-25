@@ -1,5 +1,4 @@
 from time import sleep
-from turtle import end_fill
 import main
 import time
 index=main.Openurl('url.txt').url
