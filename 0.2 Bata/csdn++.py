@@ -24,7 +24,6 @@ while(z):
     cs=0
     for j in url:
         uatemp=ua[cs%(len(ua)+1)]
-        print(uatemp)
         main.gogogo(j,uatemp)
         time.sleep(int(config['interval']))# 冷却时间
         cs=cs+1
