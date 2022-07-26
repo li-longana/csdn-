@@ -28,7 +28,7 @@ while(z):
         time.sleep(int(config['interval']))# 冷却时间
         cs=cs+1
         timen=(int(config['count'])-cs)*int(config['interval'])
-        print("推广次数",cs,"预计剩余时间：",timen,end="")
+        print("\r推广次数",cs,"预计剩余时间：",timen,end="")
         if cs>int(config['count']):
             cs=0
             z=False
@@ -36,5 +36,3 @@ while(z):
             timei=int(time.perf_counter())-int(timei)
             print("完成,共耗时：",timei)
             break
-        else:
-            print(end="\r")
