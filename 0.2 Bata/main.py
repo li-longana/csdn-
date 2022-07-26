@@ -50,9 +50,9 @@ class indexurl:
         print("当前博主：",html.xpath(name),"开始推广：")
 
 class gogogo:
-    def __init__(self,url,headers):
-        ua = {'User-Agent':headers}
+    def __init__(self,url,ua):
+        headers = {'User-Agent':ua}
 
-        requests.get(url,headers=ua)
+        requests.get(url,headers=headers)
 
 
