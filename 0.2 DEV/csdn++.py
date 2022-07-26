@@ -38,4 +38,3 @@ while(z):
         print()
         timei=int(time.perf_counter())-int(timei)
         print("完成,共耗时：",timei)
-        break
