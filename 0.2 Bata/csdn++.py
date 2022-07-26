@@ -15,25 +15,27 @@ time.sleep(1)
 
 ua=main.Openua('ua.txt').ua
 # 加载ua
-url=main.indexurl(config['url']).url
-# 加载文章
+
 timei=time.perf_counter()
 z=True
 while(z):
+    url = main.indexurl(config['url']).url
+    # 加载文章
     cs=0
-    for i in ua:
-        for j in url:
-            main.gogogo(j,i)
-            time.sleep(int(config['interval']))# 冷却时间
-            cs=cs+1
-            timen=(int(config['count'])-cs)*int(config['interval'])
-            print("推广次数",cs,"预计剩余时间：",timen,end="")
-            if cs>int(config['count']):
-                cs=0
-                z=False
-                print()
-                timei=int(time.perf_counter())-int(timei)
-                print("完成,共耗时：",timei)
-                break
-            else:
-                print(end="\r")
+    for j in url:
+        uatemp=ua[cs%(len(ua)+1)]
+        print(uatemp)
+        main.gogogo(j,uatemp)
+        time.sleep(int(config['interval']))# 冷却时间
+        cs=cs+1
+        timen=(int(config['count'])-cs)*int(config['interval'])
+        print("推广次数",cs,"预计剩余时间：",timen,end="")
+        if cs>int(config['count']):
+            cs=0
+            z=False
+            print()
+            timei=int(time.perf_counter())-int(timei)
+            print("完成,共耗时：",timei)
+            break
+        else:
+            print(end="\r")
