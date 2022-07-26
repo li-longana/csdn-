@@ -1,11 +1,11 @@
 import main
 import time
 import random
-print("CSDN++ 0.2 Bata版本启动中。。",end="\r")
+print("CSDN++ 0.2 DEV版本启动中。。",end="\r")
 time.sleep(1)
-print("CSDN++ 0.2 Bata版本启动中。。。。",end="\r")
+print("CSDN++ 0.2 DEV版本启动中。。。。",end="\r")
 time.sleep(1)
-print("CSDN++ 0.2 Bata版本启动中。。。。。。")
+print("CSDN++ 0.2 DEV版本启动中。。。。。。")
 time.sleep(1)
 config=main.Openconfig('config.txt').config
 # 加载配置文件
@@ -25,7 +25,7 @@ while(z):
     # 加载文章
     cs=0
     for j in url:
-        uatemp=ua[cs%(len(ua)+luck)]
+        uatemp=ua[(cs+luck)%(len(ua))]
         main.gogogo(j,uatemp)
         time.sleep(int(config['interval']))# 冷却时间
         cs=cs+1
