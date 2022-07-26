@@ -23,7 +23,7 @@ while(z):
     # 加载文章
     cs=0
     for j in url:
-        uatemp=ua[cs%(len(ua)+1)]
+        uatemp=ua[cs%(len(ua))]
         main.gogogo(j,uatemp)
         time.sleep(int(config['interval']))# 冷却时间
         cs=cs+1
