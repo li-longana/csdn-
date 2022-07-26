@@ -18,24 +18,24 @@ print("你的幸运值为：",luck)
 ua=main.Openua('ua.txt').ua
 # 加载ua
 
+url = main.indexurl(config['url']).url
+# 加载文章
+
 timei=time.perf_counter()
 z=True
 cs = 0
 while(z):
-    url = main.indexurl(config['url']).url
-    # 加载文章
-
-    for j in url:
-        uatemp=ua[(cs+luck)%(len(ua))]
-        main.gogogo(j,uatemp)
-        time.sleep(int(config['interval']))# 冷却时间
-        cs=cs+1
-        timen=(int(config['count'])-cs)*int(config['interval'])
-        print("\r推广次数",cs,"预计剩余时间：",timen,end="")
-        if cs>int(config['count']):
-            cs=0
-            z=False
-            print()
-            timei=int(time.perf_counter())-int(timei)
-            print("完成,共耗时：",timei)
-            break
+    uatemp=ua[(cs+luck)%(len(ua))]
+    indextemp=(url[(cs+(2*luck))%len(url)])
+    main.gogogo(indextemp,uatemp)
+    time.sleep(int(config['interval']))# 冷却时间
+    cs=cs+1
+    timen=(int(config['count'])-cs)*int(config['interval'])
+    print("\r推广次数",cs,"预计剩余时间：",timen,end="")
+    if cs>int(config['count']):
+        cs=0
+        z=False
+        print()
+        timei=int(time.perf_counter())-int(timei)
+        print("完成,共耗时：",timei)
+        break
