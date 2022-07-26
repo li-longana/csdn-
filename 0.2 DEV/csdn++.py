@@ -20,10 +20,11 @@ ua=main.Openua('ua.txt').ua
 
 timei=time.perf_counter()
 z=True
+cs = 0
 while(z):
     url = main.indexurl(config['url']).url
     # 加载文章
-    cs=0
+
     for j in url:
         uatemp=ua[(cs+luck)%(len(ua))]
         main.gogogo(j,uatemp)
